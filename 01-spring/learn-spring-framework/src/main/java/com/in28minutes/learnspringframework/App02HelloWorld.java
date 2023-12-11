@@ -15,6 +15,10 @@ public class App02HelloWorld {
         System.out.println(context.getBean("name")); //Pass the name of the bean
         System.out.println(context.getBean("age"));
         System.out.println(context.getBean("person"));
+        System.out.println(context.getBean("address2"));
+        System.out.println(context.getBean(Address.class)); // Use the type of bean to retrieve the bean
+        // If there are multiple beans with the same type, then an excpetion is thrown
 
+        System.out.println(context.getBean("person2MethodCall"));
     }
 }
