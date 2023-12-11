@@ -40,4 +40,9 @@ public class HelloWorldConfiguration {
     public Person person2MethodCall(){
         return new Person(name(), age(), address()); //name, age
     }
+    // 2) Parameters
+    @Bean
+    public Person person3Parameters(String name, int age, Address address2){ // Beans are injected
+        return new Person(name, age, address2); // Use the bean name instead of the function call
+    }
 }

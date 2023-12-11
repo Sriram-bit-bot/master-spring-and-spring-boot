@@ -20,5 +20,6 @@ public class App02HelloWorld {
         // If there are multiple beans with the same type, then an excpetion is thrown
 
         System.out.println(context.getBean("person2MethodCall"));
+        System.out.println(context.getBean("person3Parameters"));
     }
 }
