@@ -1,6 +1,9 @@
 package com.in28minutes.learnspringframework;
 
+import ch.qos.logback.core.net.SyslogOutputStream;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import java.util.Arrays;
 
 public class App02HelloWorld {
     public static void main(String[] args){
@@ -21,5 +24,15 @@ public class App02HelloWorld {
 
         System.out.println(context.getBean("person2MethodCall"));
         System.out.println(context.getBean("person3Parameters"));
+
+        // Get all Spring bean names
+        Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
+        // Even the configuration is referred as a bean
+
+         // If there are multiple matching candidates -> make one of the candidates primary -> @Primary
+        System.out.println(context.getBean(Address.class));
+
+        // Or @Qualifier("address3Qualifier ")
+        System.out.println(context.getBean("person5Qualifier"));
     }
 }
