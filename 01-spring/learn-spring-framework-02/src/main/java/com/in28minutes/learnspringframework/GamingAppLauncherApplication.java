@@ -25,7 +25,7 @@ public class GamingAppLauncherApplication {
         // Steps:
         // 1) Launch the spring context
         try(var context =new AnnotationConfigApplicationContext(GamingAppLauncherApplication.class)){
-            context.getBean(GamingConsole.class).up();
+//            context.getBean(GamingConsole.class).up();
             context.getBean(GameRunner.class).run();
         };
 
